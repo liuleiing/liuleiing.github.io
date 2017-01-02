@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="&amp;#x5185;&amp;#x5BB9;&amp;#x603B;&amp;#x7ED3;
+Buffer&amp;#x7F13;&amp;#x51B2;&amp;#x533A;
+fs &amp;#x6587;&amp;#x4EF6;&amp;#x6A21;&amp;#x5757;&amp;#x52A0;&amp;#x5F3A;
+&amp;#x6D41;&amp;#x7684;&amp;#x6982;&amp;#x5FF5;
+p" />
+  
+
+  
+  
+  
+  
+  
+  
+  <title>NodeJs学习笔记 03 | xing_liulei</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="&amp;#x5185;&amp;#x5BB9;&amp;#x603B;&amp;#x7ED3;
+Buffer&amp;#x7F13;&amp;#x51B2;&amp;#x533A;
+fs &amp;#x6587;&amp;#x4EF6;&amp;#x6A21;&amp;#x5757;&amp;#x52A0;&amp;#x5F3A;
+&amp;#x6D41;&amp;#x7684;&amp;#x6982;&amp;#x5FF5;
+path &amp;#x6A21;&amp;#x5757;1. Buffer&amp;#x7F13;&amp;#x51B2;&amp;#x53">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NodeJs学习笔记 03">
+<meta property="og:url" content="http://yoursite.com/2016/12/30/NodeJs学习笔记-03/index.html">
+<meta property="og:site_name" content="xing_liulei">
+<meta property="og:description" content="&amp;#x5185;&amp;#x5BB9;&amp;#x603B;&amp;#x7ED3;
+Buffer&amp;#x7F13;&amp;#x51B2;&amp;#x533A;
+fs &amp;#x6587;&amp;#x4EF6;&amp;#x6A21;&amp;#x5757;&amp;#x52A0;&amp;#x5F3A;
+&amp;#x6D41;&amp;#x7684;&amp;#x6982;&amp;#x5FF5;
+path &amp;#x6A21;&amp;#x5757;1. Buffer&amp;#x7F13;&amp;#x51B2;&amp;#x53">
+<meta property="og:updated_time" content="2017-01-02T17:30:57.358Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="NodeJs学习笔记 03">
+<meta name="twitter:description" content="&amp;#x5185;&amp;#x5BB9;&amp;#x603B;&amp;#x7ED3;
+Buffer&amp;#x7F13;&amp;#x51B2;&amp;#x533A;
+fs &amp;#x6587;&amp;#x4EF6;&amp;#x6A21;&amp;#x5757;&amp;#x52A0;&amp;#x5F3A;
+&amp;#x6D41;&amp;#x7684;&amp;#x6982;&amp;#x5FF5;
+path &amp;#x6A21;&amp;#x5757;1. Buffer&amp;#x7F13;&amp;#x51B2;&amp;#x53">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+</head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="xing_liulei" rel="home">xing_liulei</a>
+      </h1>
+      
+        <h2 class="site-description">
+          <a href="/" id="subtitle">liulei&#39;s blog</a>
+        </h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-NodeJs学习笔记-03" class="post-NodeJs学习笔记-03 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      NodeJs学习笔记 03
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2016/12/30/NodeJs学习笔记-03/" data-id="cixgddyrv0001y4ugmhogisfi" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h3 id="&#x5185;&#x5BB9;&#x603B;&#x7ED3;"><a href="#&#x5185;&#x5BB9;&#x603B;&#x7ED3;" class="headerlink" title="&#x5185;&#x5BB9;&#x603B;&#x7ED3;"></a>&#x5185;&#x5BB9;&#x603B;&#x7ED3;</h3><ul>
+<li>Buffer&#x7F13;&#x51B2;&#x533A;</li>
+<li>fs &#x6587;&#x4EF6;&#x6A21;&#x5757;&#x52A0;&#x5F3A;</li>
+<li>&#x6D41;&#x7684;&#x6982;&#x5FF5;</li>
+<li>path &#x6A21;&#x5757;<h3 id="1-Buffer&#x7F13;&#x51B2;&#x533A;"><a href="#1-Buffer&#x7F13;&#x51B2;&#x533A;" class="headerlink" title="1. Buffer&#x7F13;&#x51B2;&#x533A;"></a>1. Buffer&#x7F13;&#x51B2;&#x533A;</h3>&#x4E13;&#x95E8;&#x7528;&#x6765;&#x5B58;&#x6570;&#x636E;&#x7684;&#x7F13;&#x51B2;&#x533A;<h5 id="1-1-&#x521B;&#x5EFA;Buffer&#x5BF9;&#x8C61;"><a href="#1-1-&#x521B;&#x5EFA;Buffer&#x5BF9;&#x8C61;" class="headerlink" title="1.1 &#x521B;&#x5EFA;Buffer&#x5BF9;&#x8C61;"></a>1.1 &#x521B;&#x5EFA;Buffer&#x5BF9;&#x8C61;</h5>&#x901A;&#x8FC7;&#x76F4;&#x63A5;<code>new Buffer(num || array || string)</code>,&#x5B9A;&#x4E49;&#x4E86;&#x957F;&#x5EA6;&#x540E;&#x4E0D;&#x80FD;&#x6539;&#x53D8;&#x3002;<code>num</code>&#x8868;&#x793A;&#x7F13;&#x51B2;&#x533A;&#x957F;&#x5EA6;&#xFF0C;<br><code>array</code>&#x8868;&#x793A;&#x76F4;&#x63A5;&#x7ED9;&#x7F13;&#x51B2;&#x533A;&#x8D4B;&#x6570;&#x7EC4;&#xFF0C;<code>string</code>&#x76F4;&#x63A5;&#x7ED9;&#x7F13;&#x51B2;&#x533A;&#x8D4B;&#x5B57;&#x7B26;&#x4E32;&#x3002;<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> buf1=<span class="keyword">new</span> Buffer(<span class="number">10</span>);<span class="comment">//&#x7F13;&#x51B2;&#x533A;&#x957F;&#x5EA6;&#x4E3A;10</span></div><div class="line"><span class="built_in">console</span>.log(buf1);<span class="comment">//&#x6CA1;&#x8D4B;&#x503C;&#x6253;&#x5370;&#x51FA;&#x6765;&#x7684;&#x5185;&#x5BB9;&#x4F1A;&#x53D8;&#x5316;</span></div><div class="line"><span class="keyword">var</span> buf2=<span class="keyword">new</span> Buffer([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]);<span class="comment">//&#x8D4B;&#x503C;&#x6570;&#x7EC4;</span></div><div class="line"><span class="keyword">var</span> buf3=<span class="keyword">new</span> Buffer(<span class="string">&quot;1234&quot;</span>,&#x201C;utf<span class="number">-8</span>&#x201D;);<span class="comment">//&#x8D4B;&#x503C;&#x5B57;&#x7B26;&#x4E32;</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="1-2-Buffer&#x5199;&#x5165;"><a href="#1-2-Buffer&#x5199;&#x5165;" class="headerlink" title="1.2 Buffer&#x5199;&#x5165;"></a>1.2 Buffer&#x5199;&#x5165;</h5><p>&#x901A;&#x8FC7;&#x4E0B;&#x6807;&#x76F4;&#x63A5;&#x8D4B;&#x503C;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">buf1[<span class="number">0</span>]=<span class="number">1</span>;</div><div class="line">buf1[<span class="number">1</span>]=<span class="number">2</span>;</div><div class="line"><span class="built_in">console</span>.log(buff1);</div></pre></td></tr></table></figure></p>
+<p>&#x4F7F;&#x7528;write()&#x65B9;&#x6CD5;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">buf1.write(<span class="string">&quot;123456&quot;</span>,<span class="number">2</span>,<span class="number">5</span>,<span class="string">&quot;utf-8&quot;</span>) ;</div></pre></td></tr></table></figure></p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2016/12/30/NodeJs学习笔记-03/">
+    <time datetime="2016-12-30T11:22:31.000Z" class="entry-date">
+        2016-12-30
+    </time>
+</a>
+    
+    
+  <span class="article-delim">&#8226;</span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NodeJs/">NodeJs</a></li></ul>
+
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+        <span class="nav-previous"><a href="/2017/01/02/NodeJs学习笔记-05/" rel="prev"><span class="meta-nav">←</span> NodeJs学习笔记 05</a></span>
+    
+    
+        <span class="nav-next"><a href="/2016/12/30/NodeJs学习笔记-02/" rel="next">NodeJs 学习笔记 02 <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2017/01/02/NodeJs学习笔记-05/">NodeJs学习笔记 05</a>
+          </li>
+        
+          <li>
+            <a href="/2016/12/30/NodeJs学习笔记-03/">NodeJs学习笔记 03</a>
+          </li>
+        
+          <li>
+            <a href="/2016/12/30/NodeJs学习笔记-02/">NodeJs 学习笔记 02</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget-content">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/NodeJs/">NodeJs</a><span class="tag-list-count">3</span></li></ul>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget-content tagcloud">
+      <a href="/tags/NodeJs/" style="font-size: 10px;">NodeJs</a>
+    </div>
+  </aside>
+
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2017 刘磊
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>
