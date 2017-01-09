@@ -61,6 +61,123 @@
       <div id="main" class="wrapper">
         <div id="primary" class="site-content"><div id="content" role="main">
   
+    <article id="post-Ajax学习笔记-02" class="post-Ajax学习笔记-02 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2017/01/07/Ajax学习笔记-02/">Ajax学习笔记 02</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/01/07/Ajax学习笔记-02/" data-id="cixq8na3r0000igugf768lmwn" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2017/01/07/Ajax学习笔记-02/">
+    <time datetime="2017-01-07T01:20:06.000Z" class="entry-date">
+        2017-01-07
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+
+
+
+
+  
+    <article id="post-Ajax学习笔记-01" class="post-Ajax学习笔记-01 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2017/01/07/Ajax学习笔记-01/">Ajax学习笔记 01</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/01/07/Ajax学习笔记-01/" data-id="cixq8na4l0002igug80ehzujk" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h3 id="&#x5185;&#x5BB9;&#x603B;&#x7ED3;"><a href="#&#x5185;&#x5BB9;&#x603B;&#x7ED3;" class="headerlink" title="&#x5185;&#x5BB9;&#x603B;&#x7ED3;"></a>&#x5185;&#x5BB9;&#x603B;&#x7ED3;</h3><ul>
+<li>Ajax&#x539F;&#x7406;</li>
+<li>Ajax&#x5F15;&#x64CE;</li>
+<li>&#x4F7F;&#x7528;Ajax&#x5F15;&#x64CE;&#xFF08;XMLHttpRequest&#x5BF9;&#x8C61;&#xFF09;</li>
+<li>onreadystatechange&#x4E8B;&#x4EF6;&#x5C5E;&#x6027;</li>
+<li>Ajax&#x5B9E;&#x73B0;&#x540C;&#x6B65;&#x548C;&#x5F02;&#x6B65;</li>
+<li>eval()</li>
+<li>jQuery&#x4E2D;&#x7684;Ajax</li>
+</ul>
+<h3 id="1-Ajax&#x539F;&#x7406;"><a href="#1-Ajax&#x539F;&#x7406;" class="headerlink" title="1. Ajax&#x539F;&#x7406;"></a>1. Ajax&#x539F;&#x7406;</h3><p>&#x901A;&#x8FC7;&#x6D4F;&#x89C8;&#x5668;&#x7684;javascript&#x5BF9;&#x8C61;XmlHttpRequest(Ajax&#x5F15;&#x64CE;)&#x5BF9;&#x8C61;&#x6765;&#x5411;&#x670D;&#x52A1;&#x5668;&#x53D1;&#x5F02;&#x6B65;&#x8BF7;&#x6C42;&#x5E76;&#x63A5;&#x6536;&#x670D;&#x52A1;&#x5668;&#x7684;&#x54CD;&#x5E94;&#x6570;&#x636E;&#xFF0C;&#x7136;&#x540E;&#x7528;javascript&#x6765;&#x64CD;&#x4F5C;DOM&#x800C;&#x66F4;&#x65B0;&#x9875;&#x9762;</p>
+<h3 id="2-Ajax&#x5F15;&#x64CE;"><a href="#2-Ajax&#x5F15;&#x64CE;" class="headerlink" title="2. Ajax&#x5F15;&#x64CE;"></a>2. Ajax&#x5F15;&#x64CE;</h3><p>&#x6240;&#x6709;&#x73B0;&#x4EE3;&#x6D4F;&#x89C8;&#x5668;Ajax&#x5F15;&#x64CE;&#x6307;&#x7684;&#x662F;XMLHttpRequest&#x5BF9;&#x8C61;&#xFF0C;&#x662F;&#x4E00;&#x4E2A;js&#x5BF9;&#x8C61;&#xFF0C;&#x8001;&#x7248;&#x672C;&#x7684;&#x662F;ActiveObject&#x5BF9;&#x8C61;&#x3002;</p>
+<p>&#x771F;&#x6B63;&#x7684;&#x8BF7;&#x6C42;&#x662F;&#x7531;Ajax&#x5F15;&#x64CE;&#x53D1;&#x51FA;&#xFF0C;&#x4E0D;&#x662F;&#x6D4F;&#x89C8;&#x5668;&#x7A97;&#x53E3;&#x53D1;&#x51FA;&#xFF0C;&#x6240;&#x4EE5;&#x6D4F;&#x89C8;&#x5668;&#x7A97;&#x53E3;&#x662F;&#x4E0D;&#x4F1A;&#x5237;&#x65B0;&#x7684;&#x3002;</p>
+<p>Ajax&#x5F15;&#x64CE;&#x540C;&#x65F6;&#x4E5F;&#x63A5;&#x6536;&#x670D;&#x52A1;&#x5668;&#x54CD;&#x5E94;&#x7684;&#x6570;&#x636E;&#x3002;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//&#x517C;&#x5BB9;&#x6027;&#x83B7;&#x53D6;Ajax&#x5F15;&#x64CE;</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">createAjax</span>(<span class="params"></span>)</span>{</div><div class="line">  <span class="comment">//&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;xhr</span></div><div class="line">  <span class="keyword">var</span> hxr;</div><div class="line">  <span class="comment">//&#x5982;&#x679C;&#x662F;&#x73B0;&#x4EE3;&#x6D4F;&#x89C8;&#x5668;</span></div><div class="line">  <span class="keyword">if</span>(XMLHttpRequest){</div><div class="line">    xhr = <span class="keyword">new</span> XMLHttpRequest();</div><div class="line">  }<span class="keyword">else</span> {<span class="comment">//&#x5982;&#x679C;&#x662F;&#x8001;&#x7248;&#x672C;&#x7684;ie</span></div><div class="line">    <span class="keyword">var</span> versions = [<span class="string">&quot;Microsoft.XMLHTTP&quot;</span>,<span class="string">&quot;Msxml2.XMLHTTP&quot;</span>,<span class="string">&quot;Msxml2.XMLHTTP.3.0&quot;</span>,<span class="string">&quot;Msxml2.XMLHTTP.5.0&quot;</span>,<span class="string">&quot;Msxml2.XMLHTTP.6.0&quot;</span>];</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i <span class="keyword">in</span> versions){</div><div class="line">      <span class="comment">//&#x521B;&#x5EFA;&#x4E0D;&#x540C;&#x7248;&#x672C;&#x7684;ie&#x6D4F;&#x89C8;&#x5668;</span></div><div class="line">      <span class="keyword">try</span>{</div><div class="line">        xhr = <span class="keyword">new</span> ActiveObject(versions[i]);</div><div class="line">        <span class="keyword">break</span>&#xFF1B;<span class="comment">//&#x8BF4;&#x660E;&#x521B;&#x5EFA;&#x6210;&#x529F;</span></div><div class="line">      }<span class="keyword">catch</span>(e){</div><div class="line">        <span class="comment">//&#x5F02;&#x5E38;&#x5904;&#x7406;</span></div><div class="line">      }</div><div class="line">    }</div><div class="line">  }</div><div class="line">  <span class="keyword">return</span> xhr;</div><div class="line">}</div></pre></td></tr></table></figure></p>
+<h3 id="3-&#x4F7F;&#x7528;Ajax&#x5F15;&#x64CE;&#xFF08;XMLHttpRequest&#x5BF9;&#x8C61;&#xFF09;"><a href="#3-&#x4F7F;&#x7528;Ajax&#x5F15;&#x64CE;&#xFF08;XMLHttpRequest&#x5BF9;&#x8C61;&#xFF09;" class="headerlink" title="3. &#x4F7F;&#x7528;Ajax&#x5F15;&#x64CE;&#xFF08;XMLHttpRequest&#x5BF9;&#x8C61;&#xFF09;"></a>3. &#x4F7F;&#x7528;Ajax&#x5F15;&#x64CE;&#xFF08;XMLHttpRequest&#x5BF9;&#x8C61;&#xFF09;</h3><p>&#x5E38;&#x7528;&#x8BED;&#x6CD5;<br><img src="/2017/01/07/Ajax&#x5B66;&#x4E60;&#x7B14;&#x8BB0;-01/AjaxMethod.jpg" alt="Method"></p>
+<p><img src="/2017/01/07/Ajax&#x5B66;&#x4E60;&#x7B14;&#x8BB0;-01/AjaxAttr.jpg" alt="Attr"></p>
+<h5 id="3-1-Ajax&#x4F7F;&#x7528;get&#x65B9;&#x5F0F;&#x53D1;&#x9001;&#x8BF7;&#x6C42;"><a href="#3-1-Ajax&#x4F7F;&#x7528;get&#x65B9;&#x5F0F;&#x53D1;&#x9001;&#x8BF7;&#x6C42;" class="headerlink" title="3.1 Ajax&#x4F7F;&#x7528;get&#x65B9;&#x5F0F;&#x53D1;&#x9001;&#x8BF7;&#x6C42;"></a>3.1 Ajax&#x4F7F;&#x7528;get&#x65B9;&#x5F0F;&#x53D1;&#x9001;&#x8BF7;&#x6C42;</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//&#x521B;&#x5EFA;Ajax&#x5F15;&#x64CE;&#x5BF9;&#x8C61;</span></div><div class="line"><span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest();</div><div class="line"><span class="comment">//&#x7528;&#x4EC0;&#x4E48;&#x65B9;&#x5F0F;&#x53D1;&#x9001;&#x8BF7;&#x6C42;&#x548C;&#x8BF7;&#x6C42;url</span></div><div class="line">xhr.open(<span class="string">&quot;GET&quot;</span>,<span class="string">&quot;/index.html?name=name &amp; age=age&quot;</span>);</div><div class="line"><span class="comment">//&#x914D;&#x7F6E;</span></div><div class="line">xhr.onreadystatechange=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{</div><div class="line">  <span class="comment">//&#x5982;&#x679C;readyState==4,status==200,&#x6210;&#x529F;</span></div><div class="line">  <span class="keyword">if</span>(xhr.readyState==<span class="number">4</span>&amp;&amp;xhr.status==<span class="number">200</span>){</div><div class="line">    <span class="comment">//&#x83B7;&#x53D6;&#x670D;&#x52A1;&#x5668;&#x53D1;&#x8FC7;&#x6765;&#x7684;&#x6570;&#x636E;</span></div><div class="line">    <span class="keyword">var</span> data = xhr.responseText;</div><div class="line">  }</div><div class="line">}</div><div class="line"><span class="comment">//&#x53D1;&#x9001;&#x8BF7;&#x6C42;</span></div><div class="line">xhr.send();</div></pre></td></tr></table></figure>
+<h5 id="3-2-Ajax&#x4F7F;&#x7528;post&#x65B9;&#x5F0F;&#x53D1;&#x9001;&#x8BF7;&#x6C42;"><a href="#3-2-Ajax&#x4F7F;&#x7528;post&#x65B9;&#x5F0F;&#x53D1;&#x9001;&#x8BF7;&#x6C42;" class="headerlink" title="3.2 Ajax&#x4F7F;&#x7528;post&#x65B9;&#x5F0F;&#x53D1;&#x9001;&#x8BF7;&#x6C42;"></a>3.2 Ajax&#x4F7F;&#x7528;post&#x65B9;&#x5F0F;&#x53D1;&#x9001;&#x8BF7;&#x6C42;</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//&#x521B;&#x5EFA;Ajax&#x5F15;&#x64CE;&#x5BF9;&#x8C61;</span></div><div class="line"><span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest();</div><div class="line"><span class="comment">//&#x7528;&#x4EC0;&#x4E48;&#x65B9;&#x5F0F;&#x53D1;&#x9001;&#x8BF7;&#x6C42;&#x548C;&#x8BF7;&#x6C42;url</span></div><div class="line">xhr.open(<span class="string">&quot;post&quot;</span>,<span class="string">&quot;/index.html&quot;</span>);</div><div class="line"><span class="comment">//&#x914D;&#x7F6E;</span></div><div class="line">xhr.onreadystatechange=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{</div><div class="line">  <span class="comment">//&#x5982;&#x679C;readyState==4,status==200,&#x6210;&#x529F;</span></div><div class="line">  <span class="keyword">if</span>(xhr.readyState==<span class="number">4</span>&amp;&amp;xhr.status==<span class="number">200</span>){</div><div class="line">    <span class="comment">//&#x83B7;&#x53D6;&#x670D;&#x52A1;&#x5668;&#x53D1;&#x8FC7;&#x6765;&#x7684;&#x6570;&#x636E;</span></div><div class="line">    <span class="keyword">var</span> data = xhr.responseText;</div><div class="line">  }</div><div class="line">}</div><div class="line"><span class="comment">//&#x53D1;&#x9001;&#x8BF7;&#x6C42;</span></div><div class="line">xhr.send(<span class="string">&quot;username=username&amp;password=password&quot;</span>);</div></pre></td></tr></table></figure>
+<h3 id="4-onreadystatechange&#x4E8B;&#x4EF6;&#x5C5E;&#x6027;"><a href="#4-onreadystatechange&#x4E8B;&#x4EF6;&#x5C5E;&#x6027;" class="headerlink" title="4. onreadystatechange&#x4E8B;&#x4EF6;&#x5C5E;&#x6027;"></a>4. onreadystatechange&#x4E8B;&#x4EF6;&#x5C5E;&#x6027;</h3><p>&#x5F53;Ajax&#x5F15;&#x64CE;&#x7684;&#x72B6;&#x6001;&#x53D1;&#x751F;&#x6539;&#x53D8;&#x65F6;&#x90FD;&#x4F1A;&#x6267;&#x884C;onreadystatechange&#x5C5E;&#x6027;&#x5BF9;&#x5E94;&#x7684;&#x65B9;&#x6CD5;</p>
+<p>&#x72B6;&#x6001;&#x5C5E;&#x6027;readyState:</p>
+<ul>
+<li>0:&#x8BF7;&#x6C42;&#x672A;&#x521D;&#x59CB;&#x5316;</li>
+<li>1:&#x670D;&#x52A1;&#x5668;&#x8FDE;&#x63A5;&#x5DF2;&#x5EFA;&#x7ACB;</li>
+<li>2:&#x8BF7;&#x6C42;&#x5DF2;&#x63A5;&#x6536;</li>
+<li>3:&#x8BF7;&#x6C42;&#x5904;&#x7406;&#x4E2D;</li>
+<li>4:&#x8BF7;&#x6C42;&#x5DF2;&#x5B8C;&#x6210;&#xFF0C;&#x4E14;&#x54CD;&#x5E94;&#x5DF2;&#x5C31;&#x7EEA;</li>
+</ul>
+<h3 id="5-Ajax&#x5B9E;&#x73B0;&#x540C;&#x6B65;&#x548C;&#x5F02;&#x6B65;"><a href="#5-Ajax&#x5B9E;&#x73B0;&#x540C;&#x6B65;&#x548C;&#x5F02;&#x6B65;" class="headerlink" title="5. Ajax&#x5B9E;&#x73B0;&#x540C;&#x6B65;&#x548C;&#x5F02;&#x6B65;"></a>5. Ajax&#x5B9E;&#x73B0;&#x540C;&#x6B65;&#x548C;&#x5F02;&#x6B65;</h3><p>&#x540C;&#x6B65;&#x662F;&#x963B;&#x585E;&#x6A21;&#x5F0F;&#xFF0C;&#x5F02;&#x6B65;&#x662F;&#x975E;&#x963B;&#x585E;&#x6A21;&#x5F0F;</p>
+<p>ajax&#x5F15;&#x64CE;&#x8BFB;&#x5BF9;&#x8C61;.open(&#x65B9;&#x5F0F;get/post&#xFF0C;url&#x5730;&#x5740;&#xFF0C;&#x540C;&#x6B65;&#x5F02;&#x6B65;).  &#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;true&#x8868;&#x793A;&#x5F02;&#x6B65;,&#x9ED8;&#x8BA4;&#x4E3A;true&#xFF0C;&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;false&#x8868;&#x793A;&#x540C;&#x6B65;</p>
+<h3 id="6-eval"><a href="#6-eval" class="headerlink" title="6. eval()"></a>6. eval()</h3><p>&#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x5F53;&#x6210;js&#x4EE3;&#x7801;&#x6765;&#x6267;&#x884C;&#xFF0C;&#x53EF;&#x7528;&#x6765;&#x5C06;<code>json&#x5B57;&#x7B26;&#x4E32;</code>&#x89E3;&#x6790;&#x6210;<code>json&#x5BF9;&#x8C61;</code><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str=<span class="string">&apos;var a={&quot;name&quot;:&quot;name&quot;,&quot;age&quot;:&quot;age&quot;}&apos;</span>;</div><div class="line"><span class="built_in">eval</span>(str);</div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> a);<span class="comment">//object</span></div></pre></td></tr></table></figure></p>
+<h3 id="7-jQuery&#x4E2D;&#x7684;Ajax"><a href="#7-jQuery&#x4E2D;&#x7684;Ajax" class="headerlink" title="7. jQuery&#x4E2D;&#x7684;Ajax"></a>7. jQuery&#x4E2D;&#x7684;Ajax</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//get&#x65B9;&#x5F0F;</span></div><div class="line">$.get(<span class="string">&quot;&#x76EE;&#x6807;&#x8DEF;&#x5F84;&#xFF1F;username:Aaaa&quot;</span>,<span class="function"><span class="keyword">function</span>(<span class="params">data,status</span>)</span>{</div><div class="line">  <span class="comment">//data&#x8868;&#x793A;&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x636E;&#xFF0C;status&#x8868;&#x793A;&#x8FD4;&#x56DE;&#x7684;&#x72B6;&#x6001;</span></div><div class="line">  <span class="built_in">console</span>.log(data);</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">//post&#x65B9;&#x5F0F;</span></div><div class="line">$.post(<span class="string">&quot;&#x76EE;&#x6807;&#x8DEF;&#x5F84;&quot;</span>&#xFF0C;{&#x201C;usrname&#x201D;:<span class="string">&quot;aaaa&quot;</span>},<span class="function"><span class="keyword">function</span>(<span class="params">data,status</span>)</span>{</div><div class="line">  <span class="built_in">console</span>.log(data);  });</div><div class="line">})</div><div class="line"></div><div class="line"><span class="comment">//ajax&#x65B9;&#x5F0F;</span></div><div class="line"><span class="comment">// $.ajax({})</span></div></pre></td></tr></table></figure>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2017/01/07/Ajax学习笔记-01/">
+    <time datetime="2017-01-07T01:19:47.000Z" class="entry-date">
+        2017-01-07
+    </time>
+</a>
+    
+    
+  <span class="article-delim">&#8226;</span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ajax/">Ajax</a></li></ul>
+
+    </footer>
+</article>
+
+
+
+
+
+
+  
     <article id="post-js面向对象-对象" class="post-js面向对象-对象 post type-post status-publish format-standard hentry">
     <!---->
 
@@ -76,7 +193,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/01/06/js面向对象-对象/" data-id="cixkygqqo0003ikugsmc3al0u" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/01/06/js面向对象-对象/" data-id="cixq8na540005igug2gtbgou2" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -147,7 +264,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/01/04/Mongodb学习笔记-01/" data-id="cixkygqq20000ikuggoshhm2k" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/01/04/Mongodb学习笔记-01/" data-id="cixq8na4f0001iguglq4z6eq7" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -319,6 +436,10 @@
 <td style="text-align:left">&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x96C6;&#x7684;&#x6761;&#x6570;</td>
 <td style="text-align:left">db.collection.find().count(true\false)</td>
 </tr>
+<tr>
+<td style="text-align:left">&#x683C;&#x5F0F;&#x5316;</td>
+<td style="text-align:left">db.conllections.find().pretty()</td>
+</tr>
 </tbody>
 </table>
 <h3 id="5-&#x53EF;&#x89C6;&#x5316;&#x5DE5;&#x5177;&#x4F7F;&#x7528;"><a href="#5-&#x53EF;&#x89C6;&#x5316;&#x5DE5;&#x5177;&#x4F7F;&#x7528;" class="headerlink" title="5. &#x53EF;&#x89C6;&#x5316;&#x5DE5;&#x5177;&#x4F7F;&#x7528;"></a>5. &#x53EF;&#x89C6;&#x5316;&#x5DE5;&#x5177;&#x4F7F;&#x7528;</h3><p><a href="http://mongodb-tools.com/tool/mongovue/" target="_blank" rel="external">MongoVUE</a></p>
@@ -371,7 +492,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/01/02/NodeJs学习笔记-05/" data-id="cixkygqqe0001ikug1a22kmcb" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/01/02/NodeJs学习笔记-05/" data-id="cixq8na5w000digugoseqlt3v" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -458,7 +579,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2016/12/30/NodeJs学习笔记-03/" data-id="cixkygqr60009ikugu07hw4r3" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2016/12/30/NodeJs学习笔记-03/" data-id="cixq8na500004igugjksbgbt9" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -468,9 +589,10 @@
 <li>Buffer&#x7F13;&#x51B2;&#x533A;</li>
 <li>fs &#x6587;&#x4EF6;&#x6A21;&#x5757;&#x52A0;&#x5F3A;</li>
 <li>&#x6D41;&#x7684;&#x6982;&#x5FF5;</li>
-<li>path &#x6A21;&#x5757;<h3 id="1-Buffer&#x7F13;&#x51B2;&#x533A;"><a href="#1-Buffer&#x7F13;&#x51B2;&#x533A;" class="headerlink" title="1. Buffer&#x7F13;&#x51B2;&#x533A;"></a>1. Buffer&#x7F13;&#x51B2;&#x533A;</h3>&#x4E13;&#x95E8;&#x7528;&#x6765;&#x5B58;&#x6570;&#x636E;&#x7684;&#x7F13;&#x51B2;&#x533A;<h5 id="1-1-&#x521B;&#x5EFA;Buffer&#x5BF9;&#x8C61;"><a href="#1-1-&#x521B;&#x5EFA;Buffer&#x5BF9;&#x8C61;" class="headerlink" title="1.1 &#x521B;&#x5EFA;Buffer&#x5BF9;&#x8C61;"></a>1.1 &#x521B;&#x5EFA;Buffer&#x5BF9;&#x8C61;</h5>&#x901A;&#x8FC7;&#x76F4;&#x63A5;<code>new Buffer(num || array || string)</code>,&#x5B9A;&#x4E49;&#x4E86;&#x957F;&#x5EA6;&#x540E;&#x4E0D;&#x80FD;&#x6539;&#x53D8;&#x3002;<code>num</code>&#x8868;&#x793A;&#x7F13;&#x51B2;&#x533A;&#x957F;&#x5EA6;&#xFF0C;<br><code>array</code>&#x8868;&#x793A;&#x76F4;&#x63A5;&#x7ED9;&#x7F13;&#x51B2;&#x533A;&#x8D4B;&#x6570;&#x7EC4;&#xFF0C;<code>string</code>&#x76F4;&#x63A5;&#x7ED9;&#x7F13;&#x51B2;&#x533A;&#x8D4B;&#x5B57;&#x7B26;&#x4E32;&#x3002;<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> buf1=<span class="keyword">new</span> Buffer(<span class="number">10</span>);<span class="comment">//&#x7F13;&#x51B2;&#x533A;&#x957F;&#x5EA6;&#x4E3A;10</span></div><div class="line"><span class="built_in">console</span>.log(buf1);<span class="comment">//&#x6CA1;&#x8D4B;&#x503C;&#x6253;&#x5370;&#x51FA;&#x6765;&#x7684;&#x5185;&#x5BB9;&#x4F1A;&#x53D8;&#x5316;</span></div><div class="line"><span class="keyword">var</span> buf2=<span class="keyword">new</span> Buffer([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]);<span class="comment">//&#x8D4B;&#x503C;&#x6570;&#x7EC4;</span></div><div class="line"><span class="keyword">var</span> buf3=<span class="keyword">new</span> Buffer(<span class="string">&quot;1234&quot;</span>,&#x201C;utf<span class="number">-8</span>&#x201D;);<span class="comment">//&#x8D4B;&#x503C;&#x5B57;&#x7B26;&#x4E32;</span></div></pre></td></tr></table></figure>
-</li>
+<li>path &#x6A21;&#x5757;</li>
 </ul>
+<h3 id="1-Buffer&#x7F13;&#x51B2;&#x533A;"><a href="#1-Buffer&#x7F13;&#x51B2;&#x533A;" class="headerlink" title="1. Buffer&#x7F13;&#x51B2;&#x533A;"></a>1. Buffer&#x7F13;&#x51B2;&#x533A;</h3><p>&#x4E13;&#x95E8;&#x7528;&#x6765;&#x5B58;&#x6570;&#x636E;&#x7684;&#x7F13;&#x51B2;&#x533A;</p>
+<h5 id="1-1-&#x521B;&#x5EFA;Buffer&#x5BF9;&#x8C61;"><a href="#1-1-&#x521B;&#x5EFA;Buffer&#x5BF9;&#x8C61;" class="headerlink" title="1.1 &#x521B;&#x5EFA;Buffer&#x5BF9;&#x8C61;"></a>1.1 &#x521B;&#x5EFA;Buffer&#x5BF9;&#x8C61;</h5><p>&#x901A;&#x8FC7;&#x76F4;&#x63A5;<code>new Buffer(num || array || string)</code>,&#x5B9A;&#x4E49;&#x4E86;&#x957F;&#x5EA6;&#x540E;&#x4E0D;&#x80FD;&#x6539;&#x53D8;&#x3002;<code>num</code>&#x8868;&#x793A;&#x7F13;&#x51B2;&#x533A;&#x957F;&#x5EA6;&#xFF0C;<br><code>array</code>&#x8868;&#x793A;&#x76F4;&#x63A5;&#x7ED9;&#x7F13;&#x51B2;&#x533A;&#x8D4B;&#x6570;&#x7EC4;&#xFF0C;<code>string</code>&#x76F4;&#x63A5;&#x7ED9;&#x7F13;&#x51B2;&#x533A;&#x8D4B;&#x5B57;&#x7B26;&#x4E32;&#x3002;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> buf1=<span class="keyword">new</span> Buffer(<span class="number">10</span>);<span class="comment">//&#x7F13;&#x51B2;&#x533A;&#x957F;&#x5EA6;&#x4E3A;10</span></div><div class="line"><span class="built_in">console</span>.log(buf1);<span class="comment">//&#x6CA1;&#x8D4B;&#x503C;&#x6253;&#x5370;&#x51FA;&#x6765;&#x7684;&#x5185;&#x5BB9;&#x4F1A;&#x53D8;&#x5316;</span></div><div class="line"><span class="keyword">var</span> buf2=<span class="keyword">new</span> Buffer([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]);<span class="comment">//&#x8D4B;&#x503C;&#x6570;&#x7EC4;</span></div><div class="line"><span class="keyword">var</span> buf3=<span class="keyword">new</span> Buffer(<span class="string">&quot;1234&quot;</span>,&#x201C;utf<span class="number">-8</span>&#x201D;);<span class="comment">//&#x8D4B;&#x503C;&#x5B57;&#x7B26;&#x4E32;</span></div></pre></td></tr></table></figure></p>
 <h5 id="1-2-Buffer&#x5199;&#x5165;"><a href="#1-2-Buffer&#x5199;&#x5165;" class="headerlink" title="1.2 Buffer&#x5199;&#x5165;"></a>1.2 Buffer&#x5199;&#x5165;</h5><p>&#x901A;&#x8FC7;&#x4E0B;&#x6807;&#x76F4;&#x63A5;&#x8D4B;&#x503C;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">buf1[<span class="number">0</span>]=<span class="number">1</span>;</div><div class="line">buf1[<span class="number">1</span>]=<span class="number">2</span>;</div><div class="line"><span class="built_in">console</span>.log(buff1);</div></pre></td></tr></table></figure></p>
 <p>&#x4F7F;&#x7528;write()&#x65B9;&#x6CD5;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">buf1.write(<span class="string">&quot;123456&quot;</span>,<span class="number">2</span>,<span class="number">5</span>,<span class="string">&quot;utf-8&quot;</span>) ;</div></pre></td></tr></table></figure></p>
 
@@ -512,7 +634,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2016/12/30/NodeJs学习笔记-02/" data-id="cixkygqrb000aikug7hjujxu6" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2016/12/30/NodeJs学习笔记-02/" data-id="cixq8na67000eigug8j7rn4ch" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -594,6 +716,14 @@
       <ul>
         
           <li>
+            <a href="/2017/01/07/Ajax学习笔记-02/">Ajax学习笔记 02</a>
+          </li>
+        
+          <li>
+            <a href="/2017/01/07/Ajax学习笔记-01/">Ajax学习笔记 01</a>
+          </li>
+        
+          <li>
             <a href="/2017/01/06/js面向对象-对象/">js面向对象 对象</a>
           </li>
         
@@ -605,14 +735,6 @@
             <a href="/2017/01/02/NodeJs学习笔记-05/">NodeJs学习笔记 05</a>
           </li>
         
-          <li>
-            <a href="/2016/12/30/NodeJs学习笔记-03/">NodeJs学习笔记 03</a>
-          </li>
-        
-          <li>
-            <a href="/2016/12/30/NodeJs学习笔记-02/">NodeJs学习笔记 02</a>
-          </li>
-        
       </ul>
     </div>
   </aside>
@@ -622,7 +744,7 @@
   <aside class="widget">
     <h3 class="widget-title">Tags</h3>
     <div class="widget-content">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mongodb/">Mongodb</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NodeJs/">NodeJs</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js面向对象/">js面向对象</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/">Ajax</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mongodb/">Mongodb</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NodeJs/">NodeJs</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js面向对象/">js面向对象</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </aside>
 
@@ -631,7 +753,7 @@
   <aside class="widget">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget-content tagcloud">
-      <a href="/tags/Mongodb/" style="font-size: 10px;">Mongodb</a> <a href="/tags/NodeJs/" style="font-size: 20px;">NodeJs</a> <a href="/tags/js面向对象/" style="font-size: 10px;">js面向对象</a>
+      <a href="/tags/Ajax/" style="font-size: 10px;">Ajax</a> <a href="/tags/Mongodb/" style="font-size: 10px;">Mongodb</a> <a href="/tags/NodeJs/" style="font-size: 20px;">NodeJs</a> <a href="/tags/js面向对象/" style="font-size: 10px;">js面向对象</a>
     </div>
   </aside>
 
