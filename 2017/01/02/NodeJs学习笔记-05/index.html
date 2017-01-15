@@ -35,7 +35,7 @@ res &amp;#x54CD;&amp;#x5E94;&amp;#x5BF9;&amp;#x8C61;
 req &amp;#x8BF7;&amp;#x6C42;&amp;#x5BF9;&amp;#x8C61;
 &amp;">
 <meta property="og:image" content="http://yoursite.com/2017/01/02/NodeJs学习笔记-05/webApp.png">
-<meta property="og:updated_time" content="2017-01-04T09:42:49.573Z">
+<meta property="og:updated_time" content="2017-01-15T07:01:51.520Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="NodeJs学习笔记 05">
 <meta name="twitter:description" content="&amp;#x5185;&amp;#x5BB9;&amp;#x603B;&amp;#x7ED3;
@@ -100,7 +100,7 @@ req &amp;#x8BF7;&amp;#x6C42;&amp;#x5BF9;&amp;#x8C61;
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/01/02/NodeJs学习笔记-05/" data-id="cixq8na5w000digugoseqlt3v" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/01/02/NodeJs学习笔记-05/" data-id="cixybp32v00030kugnib96xft" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -128,7 +128,8 @@ req &amp;#x8BF7;&amp;#x6C42;&amp;#x5BF9;&amp;#x8C61;
 <p>&#x751F;&#x6210;express&#x6A21;&#x677F;</p>
 <p>express webApp</p>
 </blockquote>
-<p>&#x751F;&#x6210;&#x7684;&#x76EE;&#x5F55;&#x8BE6;&#x60C5;<br><img src="/2017/01/02/NodeJs&#x5B66;&#x4E60;&#x7B14;&#x8BB0;-05/webApp.png" alt="webApp"></p>
+<p>&#x751F;&#x6210;&#x7684;&#x76EE;&#x5F55;&#x8BE6;&#x60C5;</p>
+<p><img src="/2017/01/02/NodeJs&#x5B66;&#x4E60;&#x7B14;&#x8BB0;-05/webApp.png" alt="webApp"></p>
 <h3 id="3-res-&#x54CD;&#x5E94;&#x5BF9;&#x8C61;"><a href="#3-res-&#x54CD;&#x5E94;&#x5BF9;&#x8C61;" class="headerlink" title="3. res &#x54CD;&#x5E94;&#x5BF9;&#x8C61;"></a>3. res &#x54CD;&#x5E94;&#x5BF9;&#x8C61;</h3><h5 id="3-1-send"><a href="#3-1-send" class="headerlink" title="3.1 send()"></a>3.1 send()</h5><p>&#x53EF;&#x4EE5;&#x5411;&#x5BA2;&#x6237;&#x7AEF;&#x53D1;&#x9001;&#x4EFB;&#x610F;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x4E00;&#x4E2A;<code>router</code>&#x4E2D;&#x53EA;&#x80FD;&#x6709;&#x4E00;&#x4E2A;send&#xFF08;&#xFF09;&#x65B9;&#x6CD5;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">app.get(<span class="string">&quot;/&quot;</span>,<span class="function"><span class="keyword">function</span>(<span class="params">req,res</span>)</span>{</div><div class="line">  <span class="comment">// res.write(&quot;xxxxx&quot;);</span></div><div class="line">  <span class="comment">// res.end()</span></div><div class="line">  res.send(<span class="string">&quot;xxxxx&quot;</span>);<span class="comment">//&#x5B57;&#x7B26;&#x4E32;</span></div><div class="line">  <span class="comment">// res.send(new Buffer(10));//buffer&#x6D41;</span></div><div class="line">  <span class="comment">// res.send({name:&quot;name&quot;});//json</span></div><div class="line"></div><div class="line">  <span class="comment">//&#x8BBE;&#x7F6E;&#x72B6;&#x6001;&#x7801;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x5185;&#x5BB9;</span></div><div class="line">  <span class="comment">// res.status(500).send(&quot;&#x8BF7;&#x6C42;&#x7684;&#x9875;&#x9762;&#x4E0D;&#x5B58;&#x5728;&quot;);</span></div><div class="line">});</div></pre></td></tr></table></figure></p>
 <h5 id="3-2-download"><a href="#3-2-download" class="headerlink" title="3.2 download()"></a>3.2 download()</h5><p>&#x4E0B;&#x8F7D;&#x6587;&#x4EF6;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">res.download(<span class="string">&quot;./index.html&quot;</span>);<span class="comment">//&#x4E0B;&#x8F7D;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x4E0B;&#x7684;idnex.html&#x6587;&#x4EF6;</span></div></pre></td></tr></table></figure></p>
 <h5 id="3-3-redirect"><a href="#3-3-redirect" class="headerlink" title="3.3 redirect()"></a>3.3 redirect()</h5><p>&#x91CD;&#x5B9A;&#x5411;  &#x8DF3;&#x8F6C;&#x5230;&#x5176;&#x4ED6;&#x9875;&#x9762;&#xFF0C;&#x91CD;&#x5B9A;&#x5411;&#x5230;&#x4ECE;&#x6307;&#x5B9A;&#x7684;URL&#x8DEF;&#x5F84;(&#x6D4F;&#x89C8;&#x5668;&#x5730;&#x5740;&#x53D8;&#x4E3A;&#x8BBE;&#x7F6E;&#x7684;&#x5730;&#x5740;)<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">res.redirect(<span class="string">&quot;/index.html&quot;</span>);</div></pre></td></tr></table></figure></p>
@@ -171,7 +172,7 @@ req &amp;#x8BF7;&amp;#x6C42;&amp;#x5BF9;&amp;#x8C61;
 <nav class="nav-single">
     <h3 class="assistive-text">文章导航</h3>
     
-        <span class="nav-previous"><a href="/2017/01/04/Mongodb学习笔记-01/" rel="prev"><span class="meta-nav">←</span> Mongodb学习笔记 01</a></span>
+        <span class="nav-previous"><a href="/2017/01/02/项目中的技巧和知识/" rel="prev"><span class="meta-nav">←</span> 项目中的技巧和知识</a></span>
     
     
         <span class="nav-next"><a href="/2016/12/30/NodeJs学习笔记-03/" rel="next">NodeJs学习笔记 03 <span class="meta-nav">→</span></a></span>
@@ -221,7 +222,7 @@ req &amp;#x8BF7;&amp;#x6C42;&amp;#x5BF9;&amp;#x8C61;
           </li>
         
           <li>
-            <a href="/2017/01/02/NodeJs学习笔记-05/">NodeJs学习笔记 05</a>
+            <a href="/2017/01/02/项目中的技巧和知识/">项目中的技巧和知识</a>
           </li>
         
       </ul>
@@ -233,7 +234,7 @@ req &amp;#x8BF7;&amp;#x6C42;&amp;#x5BF9;&amp;#x8C61;
   <aside class="widget">
     <h3 class="widget-title">Tags</h3>
     <div class="widget-content">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/">Ajax</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mongodb/">Mongodb</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NodeJs/">NodeJs</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js面向对象/">js面向对象</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/">Ajax</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mongodb/">Mongodb</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NodeJs/">NodeJs</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js面向对象/">js面向对象</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/实战/">实战</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </aside>
 
@@ -242,7 +243,7 @@ req &amp;#x8BF7;&amp;#x6C42;&amp;#x5BF9;&amp;#x8C61;
   <aside class="widget">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget-content tagcloud">
-      <a href="/tags/Ajax/" style="font-size: 10px;">Ajax</a> <a href="/tags/Mongodb/" style="font-size: 10px;">Mongodb</a> <a href="/tags/NodeJs/" style="font-size: 20px;">NodeJs</a> <a href="/tags/js面向对象/" style="font-size: 10px;">js面向对象</a>
+      <a href="/tags/Ajax/" style="font-size: 15px;">Ajax</a> <a href="/tags/Mongodb/" style="font-size: 10px;">Mongodb</a> <a href="/tags/NodeJs/" style="font-size: 20px;">NodeJs</a> <a href="/tags/js面向对象/" style="font-size: 10px;">js面向对象</a> <a href="/tags/实战/" style="font-size: 10px;">实战</a>
     </div>
   </aside>
 
