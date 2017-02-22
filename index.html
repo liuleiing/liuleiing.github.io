@@ -61,6 +61,107 @@
       <div id="main" class="wrapper">
         <div id="primary" class="site-content"><div id="content" role="main">
   
+    <article id="post-fileReader接口" class="post-fileReader接口 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/02/22/fileReader接口/" data-id="cizgi3tue0009ksug8u3i88at" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h3 id="fileReader&#x662F;&#x4EC0;&#x4E48;"><a href="#fileReader&#x662F;&#x4EC0;&#x4E48;" class="headerlink" title="fileReader&#x662F;&#x4EC0;&#x4E48;"></a>fileReader&#x662F;&#x4EC0;&#x4E48;</h3><p>&#x7528;&#x6765;&#x628A;&#x6587;&#x4EF6;&#x8BFB;&#x5165;&#x5185;&#x5B58;&#xFF0C;&#x5E76;&#x4E14;&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x3002;FileReader&#x63A5;&#x53E3;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x5F02;&#x6B65;API&#xFF0C;&#x4F7F;&#x7528;&#x8BE5;API&#x53EF;&#x4EE5;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x4E3B;&#x7EBF;&#x7A0B;&#x4E2D;&#x5F02;&#x6B65;&#x8BBF;&#x95EE;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#xFF0C;&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x3002;</p>
+<h3 id="fileReader&#x80FD;&#x505A;&#x4EC0;&#x4E48;"><a href="#fileReader&#x80FD;&#x505A;&#x4EC0;&#x4E48;" class="headerlink" title="fileReader&#x80FD;&#x505A;&#x4EC0;&#x4E48;"></a>fileReader&#x80FD;&#x505A;&#x4EC0;&#x4E48;</h3><p>&#x4F7F;&#x7528;FileReader&#x5BF9;&#x8C61;,web&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x53EF;&#x4EE5;&#x5F02;&#x6B65;&#x7684;&#x8BFB;&#x53D6;&#x5B58;&#x50A8;&#x5728;&#x7528;&#x6237;&#x8BA1;&#x7B97;&#x673A;&#x4E0A;&#x7684;&#x6587;&#x4EF6;(&#x6216;&#x8005;&#x539F;&#x59CB;&#x6570;&#x636E;&#x7F13;&#x51B2;)&#x5185;&#x5BB9;,&#x53EF;&#x4EE5;&#x4F7F;&#x7528;File&#x5BF9;&#x8C61;&#x6216;&#x8005;Blob&#x5BF9;&#x8C61;&#x6765;&#x6307;&#x5B9A;&#x6240;&#x8981;&#x5904;&#x7406;&#x7684;&#x6587;&#x4EF6;&#x6216;&#x6570;&#x636E;.&#x5176;&#x4E2D;File&#x5BF9;&#x8C61;&#x53EF;&#x4EE5;&#x662F;&#x6765;&#x81EA;&#x7528;&#x6237;&#x5728;&#x4E00;&#x4E2A;input&#x5143;&#x7D20;&#x4E0A;&#x9009;&#x62E9;&#x6587;&#x4EF6;&#x540E;&#x8FD4;&#x56DE;&#x7684;FileList&#x5BF9;&#x8C61;,&#x4E5F;&#x53EF;&#x4EE5;&#x6765;&#x81EA;&#x62D6;&#x653E;&#x64CD;&#x4F5C;&#x751F;&#x6210;&#x7684; DataTransfer&#x5BF9;&#x8C61;,&#x8FD8;&#x53EF;&#x4EE5;&#x662F;&#x6765;&#x81EA;&#x5728;&#x4E00;&#x4E2A;HTMLCanvasElement&#x4E0A;&#x6267;&#x884C;mozGetAsFile()&#x65B9;&#x6CD5;&#x540E;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x3002;&#x6BD4;&#x5982;&#xFF1A;&#x56FE;&#x7247;&#x4E0A;&#x4F20;&#x9884;&#x89C8;&#x6548;&#x679C;</p>
+<h3 id="&#x56FE;&#x7247;&#x4E0A;&#x4F20;&#x9884;&#x89C8;&#x6548;&#x679C;&#x600E;&#x4E48;&#x505A;"><a href="#&#x56FE;&#x7247;&#x4E0A;&#x4F20;&#x9884;&#x89C8;&#x6548;&#x679C;&#x600E;&#x4E48;&#x505A;" class="headerlink" title="&#x56FE;&#x7247;&#x4E0A;&#x4F20;&#x9884;&#x89C8;&#x6548;&#x679C;&#x600E;&#x4E48;&#x505A;"></a>&#x56FE;&#x7247;&#x4E0A;&#x4F20;&#x9884;&#x89C8;&#x6548;&#x679C;&#x600E;&#x4E48;&#x505A;</h3><ol>
+<li><p>&#x4F7F;&#x7528;file&#x5BF9;&#x8C61;<br>html&#x4EE3;&#x7801;</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">button</span>&gt;</span>&#x56FE;&#x7247;&#x4E0A;&#x4F20;&#x9884;&#x89C8;<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;preview&quot;</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;file&quot;</span> <span class="attr">onchange</span>=<span class="string">&quot;previewImage(this)&quot;</span> /&gt;</span></div></pre></td></tr></table></figure>
+<p>css&#x90E8;&#x5206;</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="selector-id">#preview</span>{<span class="attribute">width</span>:<span class="number">260px</span>;<span class="attribute">height</span>:<span class="number">190px</span>;<span class="attribute">overflow</span>:hidden;}</div><div class="line"> <span class="selector-tag">input</span>{<span class="attribute">visibility</span>: hidden;<span class="attribute">position</span>: absolute;<span class="attribute">left</span>: <span class="number">0</span>;<span class="attribute">top</span>:<span class="number">0</span>;}</div></pre></td></tr></table></figure>
+<p>js&#x90E8;&#x5206;</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">$(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>{</div><div class="line">          $(<span class="string">&quot;button&quot;</span>).click(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>{</div><div class="line">              $(<span class="string">&quot;input&quot;</span>).trigger(<span class="string">&quot;click&quot;</span>);</div><div class="line">          });</div><div class="line">      })</div><div class="line">      <span class="comment">//&#x56FE;&#x7247;&#x4E0A;&#x4F20;&#x9884;&#x89C8;</span></div><div class="line">      <span class="function"><span class="keyword">function</span> <span class="title">previewImage</span>(<span class="params">file</span>)</span></div><div class="line">      {</div><div class="line">          <span class="keyword">var</span> div = <span class="built_in">document</span>.getElementById(<span class="string">&apos;preview&apos;</span>);</div><div class="line">          div.innerHTML =<span class="string">&apos;&lt;img id=imghead width=&quot;100%&quot;&gt;&apos;</span>;</div><div class="line">          <span class="keyword">var</span> img = <span class="built_in">document</span>.getElementById(<span class="string">&apos;imghead&apos;</span>);</div><div class="line">          <span class="comment">//&#x5B9E;&#x4F8B;fileReader&#x5BF9;&#x8C61;</span></div><div class="line">          <span class="keyword">var</span> reader = <span class="keyword">new</span> FileReader();</div><div class="line">          <span class="comment">//&#x4EE5;&#x56FE;&#x7247;&#x7684;&#x5F62;&#x5F0F;&#x8BFB;&#x53D6;</span></div><div class="line">          reader.readAsDataURL(file.files[<span class="number">0</span>]);</div><div class="line">          <span class="comment">//onload&#x4E8B;&#x4EF6;&#xFF0C;&#x6587;&#x4EF6;&#x8BFB;&#x53D6;&#x6210;&#x529F;</span></div><div class="line">          reader.onload = <span class="function"><span class="keyword">function</span>(<span class="params">evt</span>)</span>{img.src = evt.target.result;}</div><div class="line"></div><div class="line">      }</div></pre></td></tr></table></figure>
+</li>
+<li><p>&#x4F7F;&#x7528;DataTransfer&#x5BF9;&#x8C61;<br>&#x5C06;&#x6587;&#x4EF6;&#x62D6;&#x653E;&#x7684;&#x76EE;&#x6807;&#x4F4D;&#x7F6E;&#x4F7F;&#x7528;HTML5&#x63D0;&#x4F9B;&#x4E13;&#x95E8;&#x7684;&#x62D6;&#x62FD;&#x4E0E;&#x62D6;&#x653E;&#x7684;API&#x8BBE;&#x7F6E;&#x6210;&#x53EF;&#x62D6;&#x52A8;</p>
+</li>
+</ol>
+<p>&#x5728;ondrop&#x4E8B;&#x4EF6;&#x4E2D;&#xFF0C;&#x4F7F;&#x7528;&#x5B83;&#x7684;&#x4E8B;&#x4EF6;&#x5BF9;&#x8C61;&#x83B7;&#x53D6;dataTransfer&#x5BF9;&#x8C61;&#x83B7;&#x53D6;&#x62D6;&#x62FD;&#x7684;&#x56FE;&#x7247;&#x6587;&#x4EF6;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> fs = ev.dataTransfer.files;<span class="comment">//fs&#x662F;&#x4E2A;&#x6570;&#x7EC4;</span></div><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;fs.length;i++){</div><div class="line">  <span class="keyword">var</span> reader = <span class="keyword">new</span> FileReader();</div><div class="line">  reader.onload = <span class="function"><span class="keyword">function</span>(<span class="params">evt</span>)</span>{img.src = evt.target.result;}</div><div class="line">  reader.readAsDataURL(fs[i]);</div><div class="line">}</div></pre></td></tr></table></figure></p>
+<h3 id="&#x4F8B;&#x5B50;&#x6F14;&#x793A;"><a href="#&#x4F8B;&#x5B50;&#x6F14;&#x793A;" class="headerlink" title="&#x4F8B;&#x5B50;&#x6F14;&#x793A;"></a>&#x4F8B;&#x5B50;&#x6F14;&#x793A;</h3><p><a href="http://98.142.138.5/imgUpload/imguploadTest.html" target="_blank" rel="external">&#x56FE;&#x7247;input&#x4E0A;&#x4F20;&#x9884;&#x89C8;</a></p>
+<p><a href="http://98.142.138.5/imgUpload/imgdragTest.html" target="_blank" rel="external">&#x56FE;&#x7247;&#x62D6;&#x62FD;&#x9884;&#x89C8;</a></p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2017/02/22/fileReader接口/">
+    <time datetime="2017-02-22T05:05:45.437Z" class="entry-date">
+        2017-02-22
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+
+
+
+
+  
+    <article id="post-centos-6-64服务器租用以及配置" class="post-centos-6-64服务器租用以及配置 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2017/02/21/centos-6-64服务器租用以及配置/">centos-6-64服务器租用以及配置.md</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/02/21/centos-6-64服务器租用以及配置/" data-id="cizgi3tu80008ksugg58v0sbt" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h3 id="&#x5185;&#x5BB9;&#x603B;&#x7ED3;"><a href="#&#x5185;&#x5BB9;&#x603B;&#x7ED3;" class="headerlink" title="&#x5185;&#x5BB9;&#x603B;&#x7ED3;"></a>&#x5185;&#x5BB9;&#x603B;&#x7ED3;</h3><ul>
+<li>centos-6 &#x670D;&#x52A1;&#x5668;&#x79DF;&#x7528;</li>
+<li>&#x914D;&#x7F6E;node</li>
+<li>&#x914D;&#x7F6E;mongodb</li>
+<li>&#x914D;&#x7F6E;epxress</li>
+</ul>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2017/02/21/centos-6-64服务器租用以及配置/">
+    <time datetime="2017-02-21T15:31:20.000Z" class="entry-date">
+        2017-02-21
+    </time>
+</a>
+    
+    
+  <span class="article-delim">&#8226;</span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
+
+    </footer>
+</article>
+
+
+
+
+
+
+  
     <article id="post-Ajax学习笔记-02" class="post-Ajax学习笔记-02 post type-post status-publish format-standard hentry">
     <!---->
 
@@ -76,7 +177,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/01/07/Ajax学习笔记-02/" data-id="ciyblv3th0001u8ughk6whu9a" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/01/07/Ajax学习笔记-02/" data-id="cizgi3ttu0003ksugvgjfqx4b" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -130,7 +231,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/01/07/Ajax学习笔记-01/" data-id="ciyblv3ta0000u8ugj1oxkces" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/01/07/Ajax学习笔记-01/" data-id="cizgi3tsb0000ksug4uxa07j4" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -188,7 +289,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/01/06/js面向对象-对象/" data-id="ciyblv3um0009u8ug8s5el3gm" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/01/06/js面向对象-对象/" data-id="cizgi3tvz000lksug574ergkd" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -244,7 +345,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/01/04/Mongodb学习笔记-01/" data-id="ciyblv3tp0003u8ug2l1f0eqp" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/01/04/Mongodb学习笔记-01/" data-id="cizgi3tu20005ksugc8cthq3j" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -302,7 +403,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/01/02/NodeJs学习笔记-05/" data-id="ciyblv3uj0008u8ug6vz2ok54" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/01/02/NodeJs学习笔记-05/" data-id="cizgi3tun000bksugqbhz8dnd" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -359,7 +460,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/01/02/项目中的技巧和知识/" data-id="ciyblv3uq000cu8uggcwvzt4n" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/01/02/项目中的技巧和知识/" data-id="cizgi3tw0000mksugtlp31ay0" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -415,7 +516,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2016/12/30/NodeJs学习笔记-03/" data-id="ciyblv3ud0005u8ug0it8pww6" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2016/12/30/NodeJs学习笔记-03/" data-id="cizgi3ttm0001ksug17pooomk" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -471,7 +572,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2016/12/30/NodeJs学习笔记-02/" data-id="ciyblv3u20004u8ugf1sumcis" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2016/12/30/NodeJs学习笔记-02/" data-id="cizgi3ttw0004ksugbh7b8gvl" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -537,6 +638,14 @@
       <ul>
         
           <li>
+            <a href="/2017/02/22/fileReader接口/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/02/21/centos-6-64服务器租用以及配置/">centos-6-64服务器租用以及配置.md</a>
+          </li>
+        
+          <li>
             <a href="/2017/01/07/Ajax学习笔记-02/">Ajax学习笔记 02</a>
           </li>
         
@@ -548,14 +657,6 @@
             <a href="/2017/01/06/js面向对象-对象/">js面向对象 对象</a>
           </li>
         
-          <li>
-            <a href="/2017/01/04/Mongodb学习笔记-01/">Mongodb学习笔记 01</a>
-          </li>
-        
-          <li>
-            <a href="/2017/01/02/NodeJs学习笔记-05/">NodeJs学习笔记 05</a>
-          </li>
-        
       </ul>
     </div>
   </aside>
@@ -565,7 +666,7 @@
   <aside class="widget">
     <h3 class="widget-title">Tags</h3>
     <div class="widget-content">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/">Ajax</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mongodb/">Mongodb</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NodeJs/">NodeJs</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js面向对象/">js面向对象</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/实战/">实战</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/">Ajax</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mongodb/">Mongodb</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NodeJs/">NodeJs</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js面向对象/">js面向对象</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/实战/">实战</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/技术/">技术</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </aside>
 
@@ -574,7 +675,7 @@
   <aside class="widget">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget-content tagcloud">
-      <a href="/tags/Ajax/" style="font-size: 15px;">Ajax</a> <a href="/tags/Mongodb/" style="font-size: 10px;">Mongodb</a> <a href="/tags/NodeJs/" style="font-size: 20px;">NodeJs</a> <a href="/tags/js面向对象/" style="font-size: 10px;">js面向对象</a> <a href="/tags/实战/" style="font-size: 10px;">实战</a>
+      <a href="/tags/Ajax/" style="font-size: 15px;">Ajax</a> <a href="/tags/Mongodb/" style="font-size: 10px;">Mongodb</a> <a href="/tags/NodeJs/" style="font-size: 20px;">NodeJs</a> <a href="/tags/js面向对象/" style="font-size: 10px;">js面向对象</a> <a href="/tags/实战/" style="font-size: 10px;">实战</a> <a href="/tags/技术/" style="font-size: 10px;">技术</a>
     </div>
   </aside>
 
